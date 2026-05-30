@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakshi Weds Akshat</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --gold:#c9a86a;
+    --ivory:#faf8f3;
+    --text:#2b2b2b;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--ivory);
+    color:var(--text);
+    font-family:'Poppins',sans-serif;
+}
+
+section{
+    padding:90px 8%;
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url('hero-photo.jpg') center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:5rem;
+    font-weight:500;
+}
+
+.hero-content p{
+    letter-spacing:3px;
+    margin-top:15px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 30px;
+    border:1px solid white;
+    color:white;
+    text-decoration:none;
+}
+
+.countdown{
+    margin-top:25px;
+    font-size:1.1rem;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.heading h2{
+    font-size:3rem;
+    color:var(--gold);
+    font-family:'Cormorant Garamond',serif;
+}
+
+.invitation{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:2;
+}
+
+.story{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.story img{
+    width:100%;
+    border-radius:20px;
+}
+
+.events{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.card h3{
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+.venue{
+    text-align:center;
+}
+
+.rsvp{
+    max-width:650px;
+    margin:auto;
+}
+
+input,textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+button{
+    background:var(--gold);
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:50px 20px;
+    background:#f4f0e7;
+}
+
+.music-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:100;
+    background:var(--gold);
+    color:white;
+    border:none;
+    padding:12px 16px;
+    border-radius:50px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:3rem;
+}
+
+.story{
+    grid-template-columns:1fr;
+}
+
+}
+</style>
+</head>
+<body>
+
+<audio id="bgm" autoplay loop>
+    <source src="bgm.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">
+🎵 Music
+</button>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div style="font-size:2rem;">🕉️</div>
+
+<h1>Sakshi<br>&<br>Akshat</h1>
+
+<p>30 JUNE 2026</p>
+
+<div id="countdown" class="countdown"></div>
+
+<a href="#invite" class="btn">View Invitation</a>
+
+</div>
+</section>
+
+<section id="invite">
+
+<div class="heading">
+<h2>The Invitation</h2>
+</div>
+
+<div class="invitation">
+
+<p>
+Together with their families
+</p>
+
+<br>
+
+<h3>Tarkeshwar & Narmada Dewangan</h3>
+
+<p>
+request the pleasure of your company
+at the wedding celebration of their beloved daughter
+</p>
+
+<h2>Sakshi Dewangan</h2>
+
+<br>
+
+<p>with</p>
+
+<br>
+
+<h3>Manish & Surekha Tiwari</h3>
+
+<p>
+request the pleasure of your company
+at the wedding celebration of their beloved son
+</p>
+
+<h2>Akshat Tiwari</h2>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="heading">
+<h2>Our Journey</h2>
+</div>
+
+<div class="story">
+
+<img src="chibi.png" alt="Chibi Art">
+
+<div>
+
+<h3>From smiles to forever ❤️</h3>
+
+<br>
+
+<p>
+A beautiful journey that brought two hearts together.
+Surrounded by love, family and blessings,
+we invite you to celebrate the beginning of our forever.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="heading">
+<h2>Wedding Celebrations</h2>
+</div>
+
+<div class="events">
+
+<div class="card">
+<h3>🎵 Sangeet</h3>
+<p>28 June 2026</p>
+<p>7 PM onwards</p>
+</div>
+
+<div class="card">
+<h3>🌼 Phoolon Wali Haldi</h3>
+<p>29 June 2026</p>
+<p>10 AM onwards</p>
+</div>
+
+<div class="card">
+<h3>🎉 Reception</h3>
+<p>29 June 2026</p>
+<p>8 PM onwards</p>
+</div>
+
+<div class="card">
+<h3>🔥 Wedding Pheras</h3>
+<p>30 June 2026</p>
+<p>1 AM onwards</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="heading">
+<h2>Venue</h2>
+</div>
+
+<div class="venue">
+
+<h3>Rosebey Resort</h3>
+
+<p>
+Ring Road No. 3<br>
+Ama Seoni, Chhattisgarh 492014
+</p>
+
+<br>
+
+<a class="btn" style="color:#333;border-color:#333;"
+href="https://maps.google.com"
+target="_blank">
+Get Directions
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="heading">
+<h2>RSVP</h2>
+</div>
+
+<div class="rsvp">
+
+<input type="text" placeholder="Your Name">
+
+<input type="tel" placeholder="Phone Number">
+
+<input type="number" placeholder="Number of Guests">
+
+<textarea rows="4" placeholder="Message"></textarea>
+
+<button>Submit RSVP</button>
+
+<br><br>
+
+<p>
+Contact: +91 83197 74764
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2 style="font-family:'Cormorant Garamond',serif;">
+Sakshi ❤️ Akshat
+</h2>
+
+<br>
+
+<p>
+Bound by Love, United by Destiny
+</p>
+
+</footer>
+
+<script>
+
+const weddingDate =
+new Date("June 30, 2026 01:00:00").getTime();
+
+setInterval(() => {
+
+const now = new Date().getTime();
+
+const distance = weddingDate - now;
+
+const days = Math.floor(distance/(1000*60*60*24));
+
+const hours = Math.floor(
+(distance%(1000*60*60*24))/(1000*60*60)
+);
+
+document.getElementById("countdown").innerHTML =
+days + " Days " + hours + " Hours Remaining";
+
+},1000);
+
+function toggleMusic(){
+
+const music = document.getElementById("bgm");
+
+if(music.paused){
+music.play();
+}else{
+music.pause();
+}
+
+}
+
+</script>
+
+</body>
+</html>
